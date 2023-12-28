@@ -16,7 +16,7 @@ mongo:
 server:
   dpname: server
   image:
-    repository: 
+    repository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back
     tag: latest
     pullPolicy: Always
   replicaCount: 1
