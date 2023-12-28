@@ -35,7 +35,7 @@ jobs:
           git config --local user.name "Tharunika-21"
 
           git add ./values.yaml
-          git commit -m "Update image names and tags in values.yaml"
+          git commit --allow-empty -m "Updated values.yml"
           git push origin main
 
         
