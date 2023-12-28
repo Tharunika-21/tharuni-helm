@@ -1,7 +1,7 @@
 frontend:
   dpname: myapp
   image:
-    repository: 
+    repository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg
     tag: latest
     pullPolicy: Always
   replicaCount: 1
@@ -16,7 +16,7 @@ mongo:
 server:
   dpname: server
   image:
-    repository: 
+    repository: tharunika21/tggfinbackendimage
     tag: latest
     pullPolicy: Always
   replicaCount: 1
