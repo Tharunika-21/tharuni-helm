@@ -1,10 +1,11 @@
 name: Update Helm Chart
 
 on:
-  workflow_run:
-    workflows: ["Build and Push Docker Images"]
-    types:
-      - completed
+  # workflow_run:
+  #   workflows: ["Build and Push Docker Images"]
+  #   types:
+  #     - completed
+  workflow_dispatch:
 
 jobs:
   update-helm-chart:
