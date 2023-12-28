@@ -1,7 +1,7 @@
 frontend:
   dpname: myapp
   image:
-    repository: tharunika21/tggfinfrontendimage
+    repository: 
     tag: latest
     pullPolicy: Always
   replicaCount: 1
@@ -16,7 +16,7 @@ mongo:
 server:
   dpname: server
   image:
-    repository: tharunika21/tggfinbackendimage
+    repository: 
     tag: latest
     pullPolicy: Always
   replicaCount: 1
