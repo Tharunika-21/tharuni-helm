@@ -1,0 +1,40 @@
+name: Update Helm Chart
+
+on:
+  workflow_run:
+    workflows: ["Build and Push Docker Images"]
+    types:
+      - completed
+
+jobs:
+  update-helm-chart:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Helm Chart Repository
+        uses: actions/checkout@v2
+        with:
+          repository: Tharunika-21/tharuni-helm  
+
+      - name: Update Helm Chart Values
+        run: |
+          # Retrieve the output variables for frontend and backend images from the workflow run
+          FRONTEND_IMAGE=${{ steps.build-and-push-frontend.outputs.image }}
+          BACKEND_IMAGE=${{ steps.build-and-push-backend.outputs.image }}
+          
+          # Use sed or any other tool to update the values.yaml file
+          sed -i "s|repository: tharunika21/tggfinfrontendimage|repository: $FRONTEND_IMAGE|" ./values.yaml
+          sed -i "s|repository: tharunika21/tggfinbackendimage|repository: $BACKEND_IMAGE|" ./values.yaml
+
+          # Commit and push changes to your tharuni-helm repo
+          # Use git commands to commit and push the changes
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "tharunika.cs20@bitsathy.ac.in"
+          git config --local user.name "Tharunika-21"
+
+          git add ./values.yaml
+          git commit -m "Update image names and tags in values.yaml"
+          git push origin main
+
+        
