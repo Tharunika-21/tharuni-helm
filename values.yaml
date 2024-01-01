@@ -40,7 +40,7 @@ serverService:
   type: NodePort  
 
 serverHPA:
-  name: exp-autoscaler
+  name: myexp-autoscaler
   scaleTargetRefKind: Deployment
   scaleTargetRefName: server
   minReplicas: 1
@@ -48,14 +48,14 @@ serverHPA:
   targetCPUUtilizationPercentage: 50
 
 persistentVolume:
-  name: exp-pv
+  name: myexp-pv
   capacity: 250Mi
   volumePath: "/temp/data"
   storageClassName: standard
   reclaimPolicy: Retain
 
 persistentVolumeClaim:
-  name: exp-pvc
+  name: myexp-pvc
   storageRequest: 250Mi
   accessMode: ReadWriteOnce
   storageClassName: standard
