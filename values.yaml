@@ -1,7 +1,7 @@
 frontend:
   dpname: myapp
   image:
-    repository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back:e253b95
+    frepository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back:e253b95
     tag: latest
     pullPolicy: Always
   replicaCount: 1
@@ -9,14 +9,14 @@ frontend:
 mongo:
   name : mongo
   image:
-    repository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back:e253b95
+    repository: mongo
     tag: latest
   replicaCount: 1
 
 server:
   dpname: server
   image:
-    repository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back:e253b95
+    brepository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back:e253b95
     tagb: e253b95
     pullPolicy: Always
   replicaCount: 1
