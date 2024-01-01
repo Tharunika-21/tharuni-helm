@@ -1,8 +1,8 @@
 frontend:
   dpname: myapp
   image:
-    repository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg:089b89b
-    tag: 089b89b
+    repository: tharunika21/tggtaskexpfrontendimg
+    tag: latest
     pullPolicy: Always
   replicaCount: 1
 
@@ -10,13 +10,13 @@ mongo:
   name : mongo
   image:
     repository: mongo
-    tag: 089b89b
+    tag: latest
   replicaCount: 1
 
 server:
   dpname: server
   image:
-    repository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back:089b89b
+    repository: tharunika21/tggtaskexpbackendimg
     tagb: latest
     pullPolicy: Always
   replicaCount: 1
