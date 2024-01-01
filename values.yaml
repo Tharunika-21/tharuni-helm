@@ -10,14 +10,14 @@ mongo:
   name : mongo
   image:
     repository: mongo
-    tag: 
+    tag: latest
   replicaCount: 1
 
 server:
   dpname: server
   image:
     repository: 
-    tag: 
+    tagb: 
     pullPolicy: Always
   replicaCount: 1
 
