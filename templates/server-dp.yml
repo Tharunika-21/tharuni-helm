@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: "{{ .Values.server.image.repository }}:{{ .Values.server.image.tagb }}"
+        image: "{{ .Values.server.image.brepository }}:{{ .Values.server.image.tagb }}"
         imagePullPolicy: {{ .Values.server.image.pullPolicy }}
         resources:
           requests:
