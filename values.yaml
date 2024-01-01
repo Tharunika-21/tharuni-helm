@@ -1,8 +1,8 @@
 frontend:
   dpname: myapp
   image:
-    repository: 
-    tag: 
+    repository: tharunika21/tggtaskexpfrontendimg
+    tag: latest
     pullPolicy: Always
   replicaCount: 1
 
@@ -16,8 +16,8 @@ mongo:
 server:
   dpname: server
   image:
-    repository: 
-    tagb: 
+    repository: tharunika21/tggtaskexpbackendimg
+    tagb: latest
     pullPolicy: Always
   replicaCount: 1
 
