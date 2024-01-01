@@ -19,10 +19,10 @@ jobs:
 
       - name: Update Helm Chart Values
         run: |
-          sed -i "s|repository: tharunika21/tggtaskexpfrontendimg|repository: ${{ github.event.inputs.image_repo_frontend }}|" ./values.yml
-          sed -i "s|tagg: latest|tagg: ${{ github.event.inputs.image_tag_frontend }}|" ./values.yml
-          sed -i "s|repository: tharunika21/tggtaskexpbackendimg|repository: ${{ github.event.inputs.image_repo_backend }}|" ./values.yml
-          sed -i "s|tag: latest|tag: ${{ github.event.inputs.image_tag_backend }}|" ./values.yml
+          sed -i "s|repository: tharunika21/tggtaskexpfrontendimg|repository: ${{ github.event.inputs.image_repo_frontend }}|" ./values.yaml
+          sed -i "s|tagg: latest|tagg: ${{ github.event.inputs.image_tag_frontend }}|" ./values.yaml
+          sed -i "s|repository: tharunika21/tggtaskexpbackendimg|repository: ${{ github.event.inputs.image_repo_backend }}|" ./values.yaml
+          sed -i "s|tag: latest|tag: ${{ github.event.inputs.image_tag_backend }}|" ./values.yaml
           
       - name: Commit and Push Changes
         run: |
