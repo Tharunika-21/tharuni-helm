@@ -2,7 +2,7 @@ frontend:
   dpname: myapp
   image:
     frepository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back:e253b95
-    tag: latest
+    tagg: latest
     pullPolicy: Always
   replicaCount: 1
 
