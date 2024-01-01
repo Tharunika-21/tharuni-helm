@@ -19,16 +19,11 @@ jobs:
 
       - name: Update Helm Chart Values
         run: |
-          # Retrieve the output variables for frontend and backend images from the workflow run
-          FRONTEND_IMAGE=${{ steps.build-and-push-frontend.outputs.image }}
-          BACKEND_IMAGE=${{ steps.build-and-push-backend.outputs.image }}
+          sed -i "s|repository: tharunika21/tggtaskexpfrontendimg|repository: ${{ github.event.inputs.image_repo_frontend }}|" ./values.yml
+          sed -i "s|tagg: latest|tagg: ${{ github.event.inputs.image_tag_frontend }}|" ./values.yml
+          sed -i "s|repository: tharunika21/tggtaskexpbackendimg|repository: ${{ github.event.inputs.image_repo_backend }}|" ./values.yml
+          sed -i "s|tag: latest|tag: ${{ github.event.inputs.image_tag_backend }}|" ./values.yml
           
-          # Use sed or any other tool to update the values.yaml file
-          sed -i "s|repository: tharunika21/tggfinfrontendimage|repository: $FRONTEND_IMAGE|" ./values.yaml
-          sed -i "s|repository: tharunika21/tggfinbackendimage|repository: $BACKEND_IMAGE|" ./values.yaml
-
-          # Commit and push changes to your tharuni-helm repo
-          # Use git commands to commit and push the changes
       - name: Commit and Push Changes
         run: |
           git config --local user.email "tharunika.cs20@bitsathy.ac.in"
