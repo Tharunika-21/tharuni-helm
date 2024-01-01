@@ -6,7 +6,19 @@ on:
   #   types:
   #     - completed
   workflow_dispatch:
-
+    inputs:
+        image_repo_frontend:
+          description: 'Frontend Image Repository'
+          required: true
+        image_tag_frontend:
+          description: 'Frontend Image Tag'
+          required: true
+        image_repo_backend:
+          description: 'Backend Image Repository'
+          required: true
+        image_tag_backend:
+          description: 'Backend Image Tag'
+          required: true
 jobs:
   update-helm-chart:
     runs-on: ubuntu-latest
