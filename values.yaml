@@ -1,8 +1,8 @@
 frontend:
   dpname: myapp
   image:
-    frepository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg:5088fdb
-    tagg: 5088fdb
+    frepository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg
+    tagg: 86ee3c4
     pullPolicy: Always
   replicaCount: 1
 
@@ -16,8 +16,8 @@ mongo:
 server:
   dpname: server
   image:
-    brepository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back:5088fdb
-    tagb: 5088fdb
+    brepository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back
+    tagb: 86ee3c4
     pullPolicy: Always
   replicaCount: 1
 
