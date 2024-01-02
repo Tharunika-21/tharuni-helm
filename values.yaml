@@ -2,7 +2,7 @@ frontend:
   dpname: myapp
   image:
     frepository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg
-    tagg: 92c35c3
+    tagg: b61384f
     pullPolicy: Always
   replicaCount: 1
 
@@ -17,7 +17,7 @@ server:
   dpname: server
   image:
     brepository: 888229101819.dkr.ecr.ap-south-1.amazonaws.com/expimg-back
-    tagb: 92c35c3
+    tagb: b61384f
     pullPolicy: Always
   replicaCount: 1
 
